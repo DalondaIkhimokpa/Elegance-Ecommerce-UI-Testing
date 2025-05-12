@@ -86,8 +86,9 @@ A responsive front-end for a clothing e-commerce store built with HTML, Tailwind
 - ├── assets/
 - │ └── logo/ # Brand logo assets
 - │ └── logo.png
+- │ └──images/ # product images
+- └── images.png
 - ├── products/
-- │ ├── images/ # Product images
 - │ └── products.json # Product database
 - ├── cart.html # Cart page
 - ├── cart.js # Cart logic
@@ -95,6 +96,7 @@ A responsive front-end for a clothing e-commerce store built with HTML, Tailwind
 - ├── main.js # Core functionality
 - ├── products.html # Product listings
 - ├── README.md # This file
+- ├── LICENSE # This file
 - ├── script.js # Shared scripts
 - └── style.css # Global styles
 
