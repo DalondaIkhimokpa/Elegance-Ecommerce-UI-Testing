@@ -13,7 +13,7 @@ A responsive front-end for a clothing e-commerce store built with HTML, Tailwind
 
 ## 🎥 Video Demo
 
-  [Watch demo video](./assets/videos/elegance-demo_dikhimokpa2025.mp4)
+ [Click to watch the demo](./assets/videos/elegance-demo_dikhimokpa2025.mp4)
 
 
 **Screen recording demonstrates:**
@@ -113,16 +113,16 @@ A responsive front-end for a clothing e-commerce store built with HTML, Tailwind
 - Accessibility features
 
 ## 📷 Screenshots
-![Screenshots-Elegance](./products/images/Screenshot.1%202025-05-10%20at%203.06.12 PM.png)
-![Screenshots-Elegance](./products/images/Screenshot.2%202025-05-10%20at%203.27.50 PM.png)
-![Screenshot-Elegance](./products/images/Screenshot.3%202025-05-10%20at%202.46.18 PM.png)
-![Screenshots-Elegance](./products/images/Screenshot.4%202025-05-10%20at%202.46.53 PM.png)
+![Screenshots-Elegance](./assets/images/Screenshot.1%202025-05-10%20at%203.06.12 PM.png)
+![Screenshots-Elegance](./assets/images/Screenshot.2%202025-05-10%20at%203.27.50 PM.png)
+![Screenshot-Elegance](./assets/images/Screenshot.3%202025-05-10%20at%202.46.18 PM.png)
+![Screenshots-Elegance](./assets/images/Screenshot.4%202025-05-10%20at%202.46.53 PM.png)
 
 ## 🚀 Setup Instructins
 1. Clone the repo:
 
 bash
-git clone https://github.com/dalondaikhimokpa/elegance-ecommerce-project.gi
+git clone https://github.com/dalondaikhimokpa/elegance-ecommerce-site.gi
 
 2. Open in VS Code:
 
