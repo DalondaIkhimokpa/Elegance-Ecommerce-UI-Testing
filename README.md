@@ -9,7 +9,7 @@ A responsive front-end for a clothing e-commerce store built with HTML, Tailwind
 
 ## 🔗 Live Demo
 
-👉 [Visit]
+👉 [Visit] https://elegance-ecommerce-ui-testing.vercel.app/
 
 ## 🎥 Video Demo
 
