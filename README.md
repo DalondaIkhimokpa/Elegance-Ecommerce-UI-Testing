@@ -122,7 +122,7 @@ A responsive front-end for a clothing e-commerce store built with HTML, Tailwind
 1. Clone the repo:
 
 bash
-git clone https://github.com/dalondaikhimokpa/elegance-ecommerce-site.gi
+git clone [(https://github.com/DalondaIkhimokpa/Elegance-Ecommerce-UI-Testing)]
 
 2. Open in VS Code:
 
