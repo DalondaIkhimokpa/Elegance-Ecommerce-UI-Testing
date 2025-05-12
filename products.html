@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Our Products</h1>
+        
+        <!-- Product Grid -->
+        <div class="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product 1-Lightweight Denim Jacket -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lightweight Denim Jacket">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Lightweight Denim Jacket</h3>
+                <p class="text-gray-700 mb-2">$49.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="1"
+                    data-name="Lightweight Denim Jacket" 
+                    data-price="49.99" 
+                    data-image="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="1">Quick View</button>
+            </div>
+            
+            <!-- Product 2-Classy Yellow Sweat Suit -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Classy Yellow Sweat Suit">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Classy Yellow Sweat Suit</h3>
+                <p class="text-gray-700 mb-2">$69.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="2"
+                    data-name="Classy Yellow Sweat Suit" 
+                    data-price="69.99" 
+                    data-image="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="2">Quick View</button>
+            </div>
+            
+            <!-- Product 3-Nike Purple and Yellow Shoes -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Nike Purple and Yellow Shoes">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Nike Purple and Yellow Shoes</h3>
+                <p class="text-gray-700 mb-2">$69.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="3"
+                    data-name="Nike Purple and Yellow Shoes" 
+                    data-price="69.99" 
+                    data-image="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="3">Quick View</button>
+            </div>
+            
+            <!-- Product 4-Casual Summer Outfit -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Casual Summer Outfit">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Casual Summer Outfit</h3>
+                <p class="text-gray-700 mb-2">$45.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="4"
+                    data-name="Casual Summer Outfit" 
+                    data-price="45.99" 
+                    data-image="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="4">Quick View</button>
+            </div>
+            
+            <!-- Product 5-Elegant White Flowy Dress -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1617551307538-c9cdb9d71289?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Elegant White Flowy Dress">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Elegant White Flowy Dress</h3>
+                <p class="text-gray-700 mb-2">$49.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="5"
+                    data-name="Elegant White Flowy Dress" 
+                    data-price="49.99" 
+                    data-image="https://images.unsplash.com/photo-1617551307538-c9cdb9d71289?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="5">Quick View</button>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Premium Lipstick Set">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Premium Lipstick Set</h3>
+                <p class="text-gray-700 mb-2">$39.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="6"
+                    data-name="Premium Lipstick Set" 
+                    data-price="39.99" 
+                    data-image="https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="6">Quick View</button>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Skincare Bundle">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Luxury Skincare Bundle</h3>
+                <p class="text-gray-700 mb-2">$29.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="7"
+                    data-name="Luxury Skincare Bundle" 
+                    data-price="29.99" 
+                    data-image="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">  
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="7">Quick View</button>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Signature Makeup Collection">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Signature Makeup Collection</h3>
+                <p class="text-gray-700 mb-2">$39.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="8"
+                    data-name="Signature Makeup Collection" 
+                    data-price="39.99" 
+                    data-image="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="8">Quick View</button>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1408&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chanel No. 5 Perfume">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Chanel No. 5 Perfume</h3>
+                <p class="text-gray-700 mb-2">$99.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="9"
+                    data-name="Chanel No. 5 Perfume" 
+                    data-price="99.99" 
+                    data-image="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1408&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="9">Quick View</button>
+            </div>
+            
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Two Piece Outfit - Shorts and Sweater">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Two Piece Outfit - Shorts and Sweater</h3>
+                <p class="text-gray-700 mb-2">$69.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="10"
+                    data-name="Two Piece Outfit - Shorts and Sweater" 
+                    data-price="69.99" 
+                    data-image="https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="10">Quick View</button>
+            </div>
+            
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1608042314453-ae338d80c427?q=80&w=1710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Trendy Jewelry - 5pc Ring Set">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Trendy Jewelry - 5pc Ring Set</h3>
+                <p class="text-gray-700 mb-2">$19.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="11"
+                    data-name="Trendy Jewelry - 5pc Ring Set" 
+                    data-price="19.99" 
+                    data-image="https://images.unsplash.com/photo-1608042314453-ae338d80c427?q=80&w=1710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="11">Quick View</button>
+            </div>
+            
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1613482184847-44483b792eeb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stylish HandBag">
+                </div>
+                <h3 class="font-bold text-lg mt-2">Stylish HandBag</h3>
+                <p class="text-gray-700 mb-2">$44.99</p>
+                <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+                    data-id="12"
+                    data-name="Stylish HandBag" 
+                    data-price="44.99" 
+                    data-image="https://images.unsplash.com/photo-1613482184847-44483b792eeb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    Add to Cart
+                </button>
+                <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="12">Quick View</button>
+            </div>
+        </div>
+    </div>
+   <!-- This shows just the fixed section for products 13-22 -->
+<div class="products-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <!-- Previous products 1-12 would be here -->
+  
+  <!-- Product 13 -Stylish Pink Pants-->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stylish Pink Pants">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Stylish Pink Pants</h3>
+      <p class="text-gray-700 mb-2">$24.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="13"
+          data-name="Stylish Pink Pants" 
+          data-price="24.99" 
+          data-image="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="13">Quick View</button>
+  </div>
+  
+  <!-- Product 14-Lightweight Scarf -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1605212964492-1be1855003a3?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lightweight Scarf">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Lightweight Scarf</h3>
+      <p class="text-gray-700 mb-2">$19.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="14"
+          data-name="Lightweight Scarf" 
+          data-price="19.99" 
+          data-image="https://images.unsplash.com/photo-1605212964492-1be1855003a3?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="14">Quick View</button>
+  </div>
+  
+  <!-- Product 15-High Heels-->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="High Heels">
+      </div>
+      <h3 class="font-bold text-lg mt-2">High Heels</h3>
+      <p class="text-gray-700 mb-2">$59.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="15"
+          data-name="High Heels" 
+          data-price="59.99" 
+          data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="15">Quick View</button>
+  </div>
+  
+  <!-- Product 16-Chick Summer Hat-->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1566851495291-00a1e8809137?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chick Summer Hat">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Chick Summer Hat</h3>
+      <p class="text-gray-700 mb-2">$29.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="16"
+          data-name="Chick Summer Hat" 
+          data-price="29.99" 
+          data-image="https://images.unsplash.com/photo-1566851495291-00a1e8809137?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="16">Quick View</button>
+  </div>
+  
+  <!-- Product 17-Skinny Jeans -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Skinny Jeans">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Skinny Jeans</h3>
+      <p class="text-gray-700 mb-2">$24.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="17"
+          data-name="Skinny Jeans" 
+          data-price="24.99" 
+          data-image="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="17">Quick View</button>
+  </div>
+  
+  <!-- Product 18-White Boomer Jacket -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="White Boomer Jacket">
+      </div>
+      <h3 class="font-bold text-lg mt-2">White Boomer Jacket</h3>
+      <p class="text-gray-700 mb-2">$49.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="18"
+          data-name="White Boomer Jacket" 
+          data-price="49.99" 
+          data-image="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="18">Quick View</button>
+  </div>
+  
+  <!-- Product 19-White and Orange New Balance Shoes -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="White and Orange New Balance Shoes">
+      </div>
+      <h3 class="font-bold text-lg mt-2">White and Orange New Balance Shoes</h3>
+      <p class="text-gray-700 mb-2">$89.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="19"
+          data-name="White and Orange New Balance Shoes" 
+          data-price="89.99" 
+          data-image="https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="19">Quick View</button>
+  </div>
+  
+  <!-- Product 20-Tan Low Cut Boots -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1531310197839-ccf54634509e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tan Low Cut Boots">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Tan Low Cut Boots</h3>
+      <p class="text-gray-700 mb-2">$79.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="20"
+          data-name="Tan Low Cut Boots" 
+          data-price="79.99" 
+          data-image="https://images.unsplash.com/photo-1531310197839-ccf54634509e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="20">Quick View</button>
+  </div>
+  
+  <!-- Product 21-Long Red Velvet Dress -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Long Red Velvet Dress">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Long Red Velvet Dress</h3>
+      <p class="text-gray-700 mb-2">$99.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="21"
+          data-name="Long Red Velvet Dress" 
+          data-price="99.99" 
+          data-image="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="21">Quick View</button>
+  </div>
+  
+  <!-- Product 22-Baggey Blue Jeans -->
+  <div class="product-card">
+      <div class="product-image-container">
+          <img src="https://images.unsplash.com/photo-1667586602976-732f9c4a3d76?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Baggey Blue Jeans">
+      </div>
+      <h3 class="font-bold text-lg mt-2">Baggey Blue Jeans</h3>
+      <p class="text-gray-700 mb-2">$39.99</p>
+      <button class="add-to-cart bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded w-full" 
+          data-id="22"
+          data-name="Baggey Blue Jeans" 
+          data-price="39.99" 
+          data-image="https://images.unsplash.com/photo-1667586602976-732f9c4a3d76?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          Add to Cart
+      </button>
+      <button class="quick-view-btn text-pink-600 hover:text-pink-700 mt-2 text-sm w-full" data-product="22">Quick View</button>
+  </div>
+</div>
+<div>
+  <div class="flex justify-center mt-4">
+    <button class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded" id="load-more">Load More</button>
+  </div>
+</div>
+
+          <!-- Repeat the same structure for other products -->
+          <!-- Copy the above product card structure for additional products -->
+</section>
+
+
+  <footer>  
+    <div class="container mx-auto text-center py-4">
+        <p class="text-gray-600">&copy; 2025 Elegance. All rights reserved.</p>
+        <p class="text-gray-600">Follow us on 
+            <a href="#" class="text-pink-600 hover:text-pink-700">Instagram</a>, 
+            <a href="#" class="text-pink-600 hover:text-pink-700">Facebook</a>, and 
+            <a href="#" class="text-pink-600 hover:text-pink-700">Twitter</a>.
+        </p>
+    </div>
+</footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

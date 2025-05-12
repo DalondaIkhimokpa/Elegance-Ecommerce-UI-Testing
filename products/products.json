@@ -1,0 +1,185 @@
+[
+        {
+            "id": 1,
+            "name": "Lightweight Denim Jacket",
+            "price": "49.99",
+            "image": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "jacket",
+            "description": "A lightweight denim jacket perfect for layering in all seasons."
+        },
+        {
+            "id": 2,
+            "name": "Classy Yellow Sweat Suit",
+            "price": "69.99",
+            "image": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "sweat suit",
+            "description": "Comfortable and stylish 2-piece yellow sweat suit."
+        },
+        {
+            "id": 3,
+            "name": "Nike Purple and Yellow Shoes",
+            "price": "69.99",
+            "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+            "description": "Stylish Nike low-top shoes in purple and yellow."
+        },
+        {
+            "id": 4,
+            "name": "Casual Summer Outfit",
+            "price": "45.99",
+            "image": "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80",
+            "category": "summer outfit",
+            "description": "Comfortable summer outfit with stylish design."
+        },
+        {
+            "id": 5,
+            "name": "Elegant White Flowy Dress",
+            "price": "49.99",
+            "image": "https://images.unsplash.com/photo-1617551307538-c9cdb9d71289?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "dress",
+            "description": "A sophisticated white dress suitable for all occasions."
+        },
+        {
+            "id": 6,
+            "name": "Premium Lipstick Set",
+            "price": "39.99",
+            "image": "https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+            "category": "lipstick",
+            "description": "Set of premium long-lasting lipsticks."
+        },
+        {
+            "id": 7,
+            "name": "Luxury Skincare Bundle",
+            "price": "29.99",
+            "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "skincare",
+            "description": "Complete skincare routine for glowing skin."
+        },
+        {
+            "id": 8,
+            "name": "Signature Makeup Collection",
+            "price": "39.99",
+            "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "makeup",
+            "description": "Elegant makeup collection for every occasion."
+        },
+        {
+            "id": 9,
+            "name": "Chanel No. 5 Perfume",
+            "price": "99.99",
+            "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "perfume",
+            "description": "The iconic Chanel No. 5 fragrance."
+        },
+        {
+            "id": 10,
+            "name": "Two Piece Outfit - Shorts and Sweater",
+            "price": "69.99",
+            "image": "https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "outfit",
+            "description": "Cute shorts and sweater combination."
+        },
+        {
+            "id": 11,
+            "name": "Trendy Jewelry - 5pc Ring Set",
+            "price": "19.99",
+            "image": "https://images.unsplash.com/photo-1608042314453-ae338d80c427?q=80&w=1710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "jewelry",
+            "description": "Retro style 5-piece ring set."
+        },
+        {
+            "id": 12,
+            "name": "Stylish HandBag",
+            "price": "44.99",
+            "image": "https://images.unsplash.com/photo-1613482184847-44483b792eeb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "handbag",
+            "description": "Versatile handbag suitable for all seasons."
+        },
+        {  
+            "id": 13,
+            "name": "Stylish Pink Pants",
+            "price": "44.99",
+            "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "pants",
+            "description": "Sylish Pink Pants suitable for all seasons."
+        },
+        {
+            "id": 14,
+            "name": "Flowy Gray Scarf",
+            "price": "19.99",
+            "image": "https://images.unsplash.com/photo-1605212964492-1be1855003a3?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "scarf",
+            "description": "Lightweight scarf perfect for layering."
+        },
+        {
+            "id": 15,
+            "name": "High Heels",
+            "price": "59.99",
+            "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "shoes",
+            "description": "Elegant high heels for special occasions."   
+        },   
+        {
+            "id": 16,
+            "name": "Chic Summer Hat",
+            "price": "29.99",
+            "image":"https://images.unsplash.com/photo-1566851495291-00a1e8809137?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "hat",
+            "description": "Stylish summer hat perfect for sunny days."
+        },
+        {
+            "id": 17,
+            "name": "Skinny Jeans",
+            "price": "24.99",
+            "image": "https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "jeans",
+            "description": "Stylish skinny jeans for a modern look."
+        },   
+        {
+            "id": 18,
+            "name": "White Boomer Jacket",
+            "price": "49.99",
+            "image": "https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "jacket",
+            "description": "A stylish white boomer jacket for a chic look."
+        },                                       
+        {
+            "id": 19,
+            "name": "White and Orange New Balance Shoes",
+            "price": "89.99",
+            "image": "https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "shoes",
+            "description": "Stylish New Balance shoes in white and orange."
+        
+        },
+        {
+
+            "id": 20,
+            "name": "Tan Low Cut Boots",
+            "price": "79.99",
+            "image": "https://images.unsplash.com/photo-1531310197839-ccf54634509e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "shoes",
+            "description": "Stylish low-cut boots perfect for casual wear."
+
+        },
+        {
+
+            "id": 21,
+            "name": "Long Red Velvet Dress",
+            "price": "99.99",
+            "image": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "dress",
+            "description": "Elegant long red velvet dress for special occasions."
+        },
+        {
+            "id": 22,
+            "name": "Baggey Blue Jeans",
+            "price": "39.99",
+            "image": "https://images.unsplash.com/photo-1667586602976-732f9c4a3d76?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "category": "jeans",
+            "description": "Stylish baggy blue jeans for a relaxed look."
+            
+            }
+    ]
+            
+        
+            

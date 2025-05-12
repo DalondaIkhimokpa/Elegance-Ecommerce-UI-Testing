@@ -1,0 +1,236 @@
+/* Hero section styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Form styles */
+.newsletter-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.5);
+}
+
+/* Cart counter styles */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Product card styles */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image styles - FIXED */
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* Button styles */
+.add-to-cart, .quick-view-btn {
+    transition: all 0.3s ease;
+}
+
+/* Social icons in footer */
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer links */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+/* Modal styling */
+#quick-view-modal, #cart-modal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+/* Add these styles to your style.css file */
+
+/* Ensure all product cards have consistent structure */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Create a container for images to maintain aspect ratio */
+.product-image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Creates a square aspect ratio */
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* Position images absolutely within their container */
+.product-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Ensure consistent styling for product details */
+.product-card h3 {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.product-card p {
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+/* Button styling */
+.add-to-cart {
+    background-color: #db2777;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #be185d;
+}
+
+.quick-view-btn {
+    color: #db2777;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.quick-view-btn:hover {
+    color: #be185d;
+}
+
+/* Grid layout for products */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+/* Responsive grid */
+@media (min-width: 640px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+/* Add this to your existing style tag in head */
+#cart-modal {
+    transition: opacity 0.3s ease;
+  }
+  #cart-items-container {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .remove-from-cart {
+    margin-left: auto;
+    padding: 0.5rem;
+  }
+  .category-previews {
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .product-preview {
+    transition: transform 0.3s ease;
+  }
+  .product-preview:hover {
+    transform: translateY(-5px);
+  }

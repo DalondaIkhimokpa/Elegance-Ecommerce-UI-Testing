@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance | Women's Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .social-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-property: color, background-color, border-color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        .cart-count {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            font-size: 0.75rem;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Make labels smaller */
+        .product-card .text-gray-500 {
+            font-size: 0.875rem;
+        }
+        .product-card .text-pink-600 {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-pink-600">Elegance</a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#new-arrivals" class="text-gray-700 hover:text-pink-600 transition">New Arrivals</a>
+                <a href="#dresses" class="text-gray-700 hover:text-pink-600 transition">Dresses</a>
+                <a href="#tops" class="text-gray-700 hover:text-pink-600 transition">Tops</a>
+                <a href="#bottoms" class="text-gray-700 hover:text-pink-600 transition">Bottoms</a>
+                <a href="#shoes" class="text-gray-700 hover:text-pink-600 transition">Shoes</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button id="cart-btn" class="text-gray-700 hover:text-pink-600 transition">
+                        <i class="fas fa-shopping-bag text-xl text-pink-600"></i>
+                        <span id="cart-counter" class="cart-count bg-pink-600 text-white rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+                </div>
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#new-arrivals" class="text-gray-700 hover:text-pink-600 transition">New Arrivals</a>
+                <a href="#dresses" class="text-gray-700 hover:text-pink-600 transition">Dresses</a>
+                <a href="#tops" class="text-gray-700 hover:text-pink-600 transition">Tops</a>
+                <a href="#bottoms" class="text-gray-700 hover:text-pink-600 transition">Bottoms</a>
+                <a href="#shoes" class="text-gray-700 hover:text-pink-600 transition">Shoes</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section 
+        class="hero-section text-white py-20 md:py-32 bg-cover bg-center bg-no-repeat relative" 
+        style="background-image: url('https://images.unsplash.com/photo-1595305726959-d84ab3d32a65?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+        role="banner" 
+        aria-label="Summer Collection 2025 hero banner"
+    >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">Summer Collection 2025</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto fade-in">
+                Elevate your wardrobe with this season's must-haves in women's fashion.
+            </p>
+            <a href="#new-arrivals" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full font-medium transition inline-block fade-in">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#dresses" class="category-card group">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square relative">
+                        <img src="https://images.unsplash.com/photo-1574655563118-3e3eab32015d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Dresses" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">Dresses</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#tops" class="category-card group">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square relative">
+                        <img src="https://images.unsplash.com/photo-1627067227944-4e8951db7f19?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Tops" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">Tops</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#bottoms" class="category-card group">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square relative">
+                        <img src="https://images.unsplash.com/photo-1669817021153-5f4d91ab182e?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Bottoms" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">Bottoms</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#shoes" class="category-card group">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden aspect-square relative">
+                        <img src="https://images.unsplash.com/photo-1589807751586-b5c674fd737c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Shoes" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">Shoes</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Featured Products Section -->
+
+    <!-- New Arrivals Section -->
+    <section id="new-arrivals" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold">New Arrivals</h2>
+                <a href="#" class="text-pink-600 hover:text-pink-700 font-medium">View All</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  <!-- Product 1 - Lightweight Denim Jacket-->
+                  <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt=" Lightweight Denim Jacket" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="1">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900"> Lightweight Denim Jacket</h3>
+                            <p class="text-pink-600 font-bold">$49.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4"> Lightweight Denim Jacket print of high-quality</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="1" data-name=" Lightweight Denim Jacket" data-price="49.99" data-image="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>   
+                <!-- Product 2 - Classy Yellow Sweat Suit-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Classy Yellow Sweat Suit" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="2">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Classy Yellow Sweat Suit</h3>
+                            <p class="text-pink-600 font-bold">$59.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Classy 2pc Yellow Sweat Suit with halter top</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="2" data-name="Classy Yellow Sweat Suit" data-price="59.99" data-image="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 - Nike Purple and Yellow Shoes-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Nike Purple and Yellow Shoes--" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-Y-0 quick-view-btn" 
+                                    data-product="3">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Nike Purple and Yellow Shoes</h3>
+                            <p class="text-pink-600 font-bold">$69.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Nice low top Nike Shoes</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="3" data-name="Nike Purple and Yellow Shoes" data-price="69.99" data-image="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 - Casual Summer Outfit -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" 
+                             alt="Casual Summer Outfit" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="4">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Casual Summer Outfit</h3>
+                            <p class="text-pink-600 font-bold">$45.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Comfortable summer outfit with stylish design</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="4" data-name="Casual Summer Outfit" data-price="45.99" data-image="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Elegant White Flowy Dress-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1617551307538-c9cdb9d71289?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Elegant White Flowy Dress" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="5">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Elegant White Flowy Dress</h3>
+                            <p class="text-pink-600 font-bold">$49.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Sophisticated for all occasions</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="5" data-name="Elegant White Flowy Dress" data-price="49.99" data-image="https://images.unsplash.com/photo-1617551307538-c9cdb9d71289?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 - Premium Lipstick Set-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Premium Lipstick Set" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="6">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Premium Lipstick Set</h3>
+                            <p class="text-pink-600 font-bold">$39.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Long-lasting lipsticks</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="6" data-name="Premium Lipstick Set" data-price="39.99" data-image="https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 - Luxury Skincare Bundle -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Luxury Skincare Bundle" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="7">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Luxury Skincare Bundle</h3>
+                            <p class="text-pink-600 font-bold">29.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Complete skincare routine for glowing skin</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="7" data-name="Luxury Skincare Bundle" data-price="29.99" data-image="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Signature Makeup Collection -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Signature Makeup Collection" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="8">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Signature Makeup Collection</h3>
+                            <p class="text-pink-600 font-bold">$39.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Elegant Makeup for every occasion</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="8" data-name="Signature Makeup Collection" data-price="39.99" data-image="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 9 - Additional Perfume -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                             alt="Chanel No. 5 Perfume" class="w-full h-80 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="9">
+                                Quick View
+                            </button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Chanel No. 5 Perfume</h3>
+                            <p class="text-pink-600 font-bold">$99.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Iconic Chanel No. 5 fragrance</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                                data-id="9" data-name="Chanel No. 5 Perfume" data-price="99.99" data-image="https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            
+        <!-- Product 10 - Shorts and Sweater -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+    <div class="relative overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Two Piece Outfit - Shorts and Sweater" class="w-full h-80 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                    data-product="10">
+                Quick View
+            </button>
+        </div>
+        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+    </div>
+    <div class="p-4">
+        <div class="flex justify-between items-start mb-2">
+            <h3 class="font-medium text-gray-900">Two Piece Outfit - Shorts and Sweater</h3>
+            <p class="text-pink-600 font-bold">$69.99</p>
+        </div>
+        <p class="text-gray-500 text-sm mb-4">Cute Shorts and Sweater summer outfit</p>
+        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition" 
+                data-id="10" data-name="Two Piece Outfit - Shorts and Sweater" data-price="69.99" data-image="https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+<!-- Product 11 - Jewelry -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+    <div class="relative overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1608042314453-ae338d80c427?q=80&w=1710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Trendy Jewelry - 5pc Ring Set" class="w-full h-80 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                    data-product="11">
+                Quick View
+            </button>
+        </div>
+        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+    </div>
+    <div class="p-4">
+        <div class="flex justify-between items-start mb-2">
+            <h3 class="font-medium text-gray-900">Trendy Jewelry - 5pc Ring Set</h3>
+            <p class="text-pink-600 font-bold">$19.99</p>
+        </div>
+        <p class="text-gray-500 text-sm mb-4">Retro Style 5pc ring set</p>
+        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                data-id="11" data-name="Trendy Jewelry - 5pc Ring Set" data-price="19.99" data-image="https://images.unsplash.com/photo-1608042314453-ae338d80c427?q=80&w=1710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            Add to Cart
+        </button>
+    </div>
+</div>
+
+<!-- Product 12 - Stylish HandBag -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+    <div class="relative overflow-hidden group">
+        <img src="https://images.unsplash.com/photo-1613482184847-44483b792eeb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+             alt="Stylish HandBag" class="w-full h-80 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                    data-product="12">
+                Quick View
+            </button>
+        </div>
+        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+    </div>
+    <div class="p-4">
+        <div class="flex justify-between items-start mb-2">
+            <h3 class="font-medium text-gray-900">Stylish HandBag</h3>
+            <p class="text-pink-600 font-bold">$44.99</p>
+        </div>
+        <p class="text-gray-500 text-sm mb-4">Stylish HandBag for all seasons</p>
+        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                data-id="12" data-name="Stylish HandBag" data-price="24.99" data-image="https://images.unsplash.com/photo-1613482184847-44483b792eeb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            Add to Cart
+        </button>
+        </div>
+    </div>
+            </div>
+        </div>
+</section>
+
+    <!-- View All Products Button -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <button id="view-all-btn" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-medium transition">View All Products</button>
+</div>
+    </section>
+
+    <!-- All Products Section (hidden by default, shown when View All is clicked) -->
+    <section id="all-products" class="py-16 bg-white hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">All Products</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <!-- Product 13 -Stylish Pink Pants-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stylish Pink Pants" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="13">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Stylish Pink Pants</h3>
+                            <p class="text-pink-600 font-bold">$24.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Stylish Pink Pants for all seasons</p>
+                    <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                            data-id="13" data-name="Stylish Pink Pants" data-price="24.99" data-image="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        Add to Cart
+                    </button>
+                </div>
+                    </div>
+                    <!-- Product 14 -Lightweight Scarf -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1605212964492-1be1855003a3?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lightweight Scarf" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="14">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Lightweight Scarf</h3>
+                            <p class="text-pink-600 font-bold">$19.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">"Lightweight scarf perfect for layering"</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="14" data-name="Lightweight Scarf" data-price="19.99" data-image="https://images.unsplash.com/photo-1605212964492-1be1855003a3?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 15-High Heels-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="High Heels" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="15">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">High Heels</h3>
+                            <p class="text-pink-600 font-bold">$59.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Elegant high heels for special occasions</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="15" data-name="High Heels" data-price="59.99" data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 16-Chick Summer Hat-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1566851495291-00a1e8809137?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt= "Chick Summer Hat" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="16">Quick View</button>             
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Chick Summer Hat</h3>
+                            <p class="text-pink-600 font-bold">$29.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">"Stylish summer hat perfect for sunny days"</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="16" data-name="Chick Summer Hat" data-price="44.99" data-image="https://images.unsplash.com/photo-1566851495291-00a1e8809137?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 17-Skinny Jeans -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Skinny Jeans" class="w-full h-48 object-cover">               
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="17">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Skinny Jeans</h3>
+                            <p class="text-pink-600 font-bold">$24.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">"Stylish skinny jeans for a modern look"</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="17" data-name="Skinny Jeans" data-price="24.99" data-image="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">    
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 18-"White Boomer Jacket -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="White Boomer Jacket" class="w-full h-48 object-cover">               
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="18">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">"White Boomer Jacket</h3>
+                            <p class="text-pink-600 font-bold">$49.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">A stylish white boomer jacket for a chic look</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="18" data-name="White Boomer Jacket" data-price="49.99" data-image="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 19-White and Orange New Balance Shoes -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="White and Orange New Balance Shoes" class="w-full h-48 object-cover">               
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="19">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">White and Orange New Balance Shoes</h3>
+                            <p class="text-pink-600 font-bold">$89.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Stylish New Balance shoes in white and orange</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="19" data-name="White and Orange New Balance Shoes" data-price="89.99" data-image="https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 20-Tan Low Cut Boots-->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1531310197839-ccf54634509e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tan Low Cut Boots" class="w-full h-48 object-cover">               
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="20">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Tan Low Cut Boots"</h3>
+                            <p class="text-pink-600 font-bold">$79.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">"Stylish low-cut boots perfect for casual wear."</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="20" data-name="Tan Low Cut Boots" data-price="79.99" data-image="https://images.unsplash.com/photo-1531310197839-ccf54634509e?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 21-Long Red Velvet Dress -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Long Red Velvet Dress" class="w-full h-48 object-cover">               
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="21">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Long Red Velvet Dress</h3>
+                            <p class="text-pink-600 font-bold">$99.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Elegant long red velvet dress for special occasions</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="21" data-name="Long Red Velvet Dress" data-price="99.99" data-image="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 22-Baggey Blue Jeans -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1667586602976-732f9c4a3d76?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Baggey Blue Jeans" class="w-full h-48 object-cover">               
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <button class="bg-white text-pink-600 px-6 py-2 rounded-full font-medium opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0 quick-view-btn" 
+                                    data-product="22">Quick View</button>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-medium text-gray-900">Baggey Blue Jeans</h3>
+                            <p class="text-pink-600 font-bold">$39.99</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">"Stylish baggy blue jeans for a relaxed look."</p>
+                        <button class="add-to-cart w-full bg-gray-100 hover:bg-pink-600 hover:text-white text-gray-800 py-2 rounded transition"
+                                data-id="22" data-name="Baggey Blue Jeans" data-price="39.99" data-image="https://images.unsplash.com/photo-1667586602976-732f9c4a3d76?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+        
+                <!-- Repeat the same structure for other products -->
+                <!-- Copy the above product card structure for additional products -->
+                
+            </div>
+        </div>
+    </section>
+<!-- Add this ABOVE your newsletter section -->
+<section class="category-previews py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Shop by Collection</h2>
+      <div id="category-previews-container"></div>
+    </div>
+  </section>
+  
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Newsletter</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Subscribe to get updates on new arrivals, special offers and other discount information.</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="newsletter-input flex-grow px-4 py-3 rounded-l-lg border border-gray-300 focus:border-pink-500 focus:outline-none">
+                <button class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-r-lg font-medium transition">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About Us -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Elegance</h3>
+                    <p class="text-gray-400 mb-4">Your premier destination for women's fashion. We offer high-quality clothing and accessories to help you express your unique style.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-pink-600 text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-pink-600 text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-pink-600 text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon bg-gray-800 hover:bg-pink-600 text-white">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Home</a></li>
+                        <li><a href="#new-arrivals" class="text-gray-400 hover:text-pink-600">New Arrivals</a></li>
+                        <li><a href="#dresses" class="text-gray-400 hover:text-pink-600">Dresses</a></li>
+                        <li><a href="#tops" class="text-gray-400 hover:text-pink-600">Tops</a></li>
+                        <li><a href="#bottoms" class="text-gray-400 hover:text-pink-600">Bottoms</a></li>
+                        <li><a href="#accessories" class="text-gray-400 hover:text-pink-600">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Returns &amp; Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-pink-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Fashion Street, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-pink-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-pink-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@elegance.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-pink-600 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 9AM - 6PM<br>Sat: 10AM - 4PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2025 Elegance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 opacity-0 invisible">
+        <div class="modal-content bg-white rounded-lg max-w-4xl w-full mx-4 transform translate-y-10">
+            <div class="relative">
+                <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+                    <div>
+                        <img id="modal-product-image" src=" alt=" class="w-full rounded-lg">
+                    </div>
+                    <div>
+                        <h3 id="modal-product-name" class="text-2xl font-bold mb-2"></h3>
+                        <p id="modal-product-price" class="text-pink-600 text-xl font-bold mb-4"></p>
+                        <p id="modal-product-description" class="text-gray-600 mb-6"></p>
+                        
+                        <div class="mb-6">
+                            <label for="size" class="block text-gray-700 mb-2">Size</label>
+                            <select id="size" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-pink-500 focus:outline-none">
+                                <option value="">Select Size</option>
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="quantity" class="block text-gray-700 mb-2">Quantity</label>
+                            <div class="flex items-center">
+                                <button id="decrease-qty" class="px-3 py-1 border border-gray-300 rounded-l bg-gray-100">-</button>
+                                <input type="number" id="quantity" value="1" min="1" class="w-16 px-2 py-1 border-t border-b border-gray-300 text-center">
+                                <button id="increase-qty" class="px-3 py-1 border border-gray-300 rounded-r bg-gray-100">+</button>
+                            </div>
+                        </div>
+                        
+                        <button id="modal-add-to-cart" class="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded">
+                            Add to Cart
+                        </button>
+            </div> 
+        </div>               
+<script>
+    // JavaScript goes here
+    // Example: toggle mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Example: update cart count on click
+    const cartBtn = document.getElementById('cart-btn');
+    const cartCounter = document.getElementById('cart-counter');
+    let cartCount = 0;
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            cartCount++;
+            cartCounter.textContent = cartCount;
+            cartCounter.classList.remove('hidden');
+        });
+    });
+
+</script>
+<script src="script.js"></script>
+                    </div>
+                </div>
+            </div>
+        
+
+    <!-- Load your JavaScript here -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Load your JavaScript here -->
+    <script src="script.js"></script>
+
+    <div id="cart-items"></div>
+
+    <!-- Modal code inside the body -->
+    <div id="quick-view-modal-alt" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded w-96 relative">
+            <button id="close-modal-alt" class="absolute top-2 right-2 text-gray-500 text-xl">&times;</button>
+            <img id="modal-image" class="w-full h-48 object-cover mb-4" src=" alt=">
+            <h2 id="modal-name" class="text-lg font-bold mb-2"></h2>
+            <p id="modal-price" class="text-pink-600 mb-4"></p>
+        </div>
+    </div>
+
+    <!-- Link your JS file correctly: must be inside the body -->
+    <script src="main.js"></script>  <!-- Sync first -->
+<script src="script.js3"></script> <!-- Then init -->
+</body>
+</html>
